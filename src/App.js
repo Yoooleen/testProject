@@ -1,5 +1,7 @@
 import { connect } from 'react-redux'
 import React from 'react';
+import { dispatchToProps } from './ActionAndHttp/action';
+import { stateToProps } from './ActionAndHttp/GetDatas';
 const TodoList = (props) => {
   let { inputValue,list,inputChange,clickBtn,deletItem} = props;
   return (
@@ -21,40 +23,6 @@ const TodoList = (props) => {
       </div>
     </div>
   );
-};
-
-//静态数据
-const stateToProps = (state) => { 
-  return {
-    inputValue: state.inputValue,
-    list: state.list,
-  };
-};
-
-//方法
-const dispatchToProps = (dispatch) => {
-  return {
-    inputChange(e) {
-      let action = {
-        type: "change_input",
-        value: e.target.value,
-      };
-      dispatch(action);
-    },
-    clickBtn() {
-      let action = {
-        type: "add_item",
-      };
-      dispatch(action);
-    },
-    deletItem(idx) {
-      let action = {
-        type: "delete_item",
-        index: idx
-      };
-      dispatch(action);
-    },
-  };
 };
 
 export default connect(stateToProps, dispatchToProps)(TodoList);
