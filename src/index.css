@@ -1,6 +1,11 @@
 body{
   margin: 0;
   padding: 0;
+  /* width: 100vh; */
+  height: 100vh;
+}
+#root{
+  height: 100%;
 }
 .content{
   width: 100%;
@@ -8,12 +13,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient( 
-  62deg, rgb(135 94 215 / 48%) 13%, rgb(161 122 255 / 29%) 4%), linear-gradient( 
-  44deg, rgba(0, 43, 99, 0.0792209024) 39%, rgb(242 140 206 / 29%) 18%), linear-gradient( 
-  118deg, rgba(84, 202, 242, 0.0315299727) 40%, rgba(215, 152, 218, 0.5) 54%), linear-gradient( 
-  58deg, rgba(246, 171, 236, 0.161) 83%, rgba(240, 193, 230, 0.909) 23%);
-  padding: 50px 0 50px;
 }
 .todoListDiv{
   border-radius: 8px;
@@ -21,23 +20,23 @@ body{
   background-color: #10101d;
   padding: 24px;
 }
-input{
+/* input{
   width: 100%;
   padding: 0 4px;
   border: none;
   border-bottom: 1px solid #fff;
   background-color: transparent;
   color: #fff;
-}
-button{
+} */
+/* button{
   width: 44px;
   height: 41px;
   border-radius: 50%;
   background-size: 44px;
   background-position: center;
   background-repeat: no-repeat;
-  background-image:url('http://bpic.588ku.com/element_origin_min_pic/19/03/07/cc136181acf40fabdef28ddd7c7487d9.jpg')
-}
+  background-image:url('http://bpic.588ku.com/element_origin_min_pic/19/03/07/cc136181acf40fabdef28ddd7c7487d9.jpg') 
+} */
 .inputDiv{
   display: flex;
 }

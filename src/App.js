@@ -1,28 +1,24 @@
 import { connect } from 'react-redux'
 import React from 'react';
-import { dispatchToProps } from './ActionAndHttp/action';
-import { stateToProps } from './ActionAndHttp/GetDatas';
-const TodoList = (props) => {
-  let { inputValue,list,inputChange,clickBtn,deletItem} = props;
-  return (
-    <div className='content'>
-      <div className='todoListDiv'>
-        <div className='inputDiv'>
-           <input value={inputValue} onChange={inputChange} />
-           <button onClick={clickBtn}></button> 
-        </div>
-        <div className='listDiv'>
-          <ul>
-            {list.map((item, index) => {
-              return <li key={index} onClick={()=>{deletItem(index)}}>
-                {item}
-              </li>;
-            })}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-};
+import LoginPage from './Login/index'
+import MainPage from './MainPage'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import SignUp from './SignUp';
+import ForgetPassword from './ForgetPassword';
 
-export default connect(stateToProps, dispatchToProps)(TodoList);
+const MainComponents = () =>{
+  return(
+    <div className='content'>
+      <BrowserRouter>
+        <Routes>
+          <Route path = '/' element = {<MainPage/>}/>
+          <Route path = '/login' element = {<LoginPage/>}/>
+          <Route path = '/signup' element = {<SignUp/>} />
+          <Route path = '/forgerpassword' element = {<ForgetPassword/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default connect()(MainComponents);

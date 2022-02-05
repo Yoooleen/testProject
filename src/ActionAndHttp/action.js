@@ -1,24 +1,32 @@
+
 export const dispatchToProps = (dispatch) => {
     return {
-      inputChange(e) {
+      
+      //获取用户名
+      UserName(data){
         let action = {
-          type: "change_input",
-          value: e.target.value,
-        };
-        dispatch(action);
+          type:'userNameChange',
+          value: data
+        }
+        dispatch(action)
       },
-      clickBtn() {
+      
+      //获取登录密码
+      Password(data){
         let action = {
-          type: "add_item",
-        };
-        dispatch(action);
+          type:'passwordChange',
+          value: data
+        }
+        dispatch(action)
       },
-      deletItem(idx) {
+      
+      // 登录页的登录按钮事件
+      submitBtn(data){
         let action = {
-          type: "delete_item",
-          index: idx
-        };
-        dispatch(action);
-      },
+          type:'submit',
+          value: data
+        }
+        dispatch(action)
+      }
     };
   };
