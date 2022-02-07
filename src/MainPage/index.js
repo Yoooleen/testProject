@@ -1,10 +1,18 @@
 import React from "react";
 import './index.css'
-export default () => {
+import Header from '../Header'
+import Aside from "../Aside";
+import Footer from '../Footer'
+const MainPage = (props) => {
 
     return(
         <div className="mainPage">
-            琳琳在此，尔等岂敢放肆！
+            <p className="projectName">泡泡的办公系统</p>
+            <Header/>
+            <Aside/>
+            <Footer/>
         </div>
     )
 }
+
+export default MainPage
