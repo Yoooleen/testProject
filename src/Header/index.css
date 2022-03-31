@@ -2,13 +2,13 @@
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .infomations{
     width: auto;
     height: 80px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 80px;
     align-items: center;
 }

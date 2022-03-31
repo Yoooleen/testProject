@@ -3,10 +3,12 @@ import React from 'react';
 import LoginPage from './Login/index'
 import MainPage from './MainPage'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { dispatchToProps } from './ActionAndHttp/action'
+import { stateToProps } from './ActionAndHttp/GetDatas'
 import SignUp from './SignUp';
 import ForgetPassword from './ForgetPassword';
 
-const MainComponents = () =>{
+const MainComponents = (props) =>{
   return(
     <div className='content'>
       <BrowserRouter>
@@ -21,4 +23,4 @@ const MainComponents = () =>{
   )
 }
 
-export default connect()(MainComponents);
+export default connect(stateToProps,dispatchToProps)(MainComponents);

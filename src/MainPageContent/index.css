@@ -1,0 +1,16 @@
+.MainPageContent{
+    width: 100%;
+    background-color: beige;
+    height:  calc(100vh - 214px);
+    margin-right: 24px;
+    overflow: scroll;
+}
+
+/* 隐藏滚动条 */
+.MainPageContent::-webkit-scrollbar{
+    display:none
+}
+
+.contxt{
+    height: 10000px;
+}

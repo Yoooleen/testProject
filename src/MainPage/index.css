@@ -10,4 +10,10 @@
     font-weight: bold;
     border-bottom: 1px solid #333;
     margin: 0 0 0 24px;
+    height: 49px;
+}
+.NavAndContent{
+    display: flex;
+    justify-content: flex-start;
+    height:  calc(100vh - 214px);
 }

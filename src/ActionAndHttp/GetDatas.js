@@ -4,7 +4,8 @@ export const stateToProps = (state) => {
       inputValue: state.inputValue,
       list: state.list,
       userName: state.userName,
-      passwords: state.passwords
+      passwords: state.passwords,
+      time: state.time,
     };
   };
   

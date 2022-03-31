@@ -2,7 +2,8 @@ const defaultState ={
     inputValue:'Hearling',
     list:[],
     userName:'',
-    passwords:''
+    passwords:'',
+    time: new Date()
 }
 
 export default (state = defaultState, action) => {
