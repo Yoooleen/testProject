@@ -30,11 +30,11 @@
     margin-bottom: 24px;
 }
 .userName{
-    width: 120px;
+    width: 100px;
     font-size: 20px;
 }
 .userPassword{
-    width: 120px;
+    width: 100px;
     font-size: 20px;
 }
 .name{
@@ -44,6 +44,14 @@
     border-bottom: 1px solid #fff;
     background-color: transparent;
     color: #000;
+    font-size: 24px;
+}
+.name:focus{
+    outline: none;
+    font-size: 24px;
+}
+.name::placeholder{
+    color:rgba(0,0,0,0.2);
     font-size: 18px;
 }
 .password{
@@ -53,6 +61,14 @@
     border-bottom: 1px solid #fff;
     background-color: transparent;
     color: #000;
+    font-size: 24px;
+}
+.password:focus{
+    outline: none;
+    font-size: 24px;
+}
+.password::placeholder{
+    color:rgba(0,0,0,0.2);
     font-size: 18px;
 }
 .buttons{

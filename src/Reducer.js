@@ -1,29 +1,16 @@
 const defaultState ={
-    inputValue:'Hearling',
-    list:[],
-    userName:'',
-    passwords:'',
-    time: new Date()
+
+    // 登录页面数据
+    userName:'', // 登录页用户名
+    passwords:'', // 登录页用户密码
+
+    //header模块数据
+    time: new Date().toLocaleTimeString(), // header模块展示的时间
+    mainName: 'Yooleen', // header模块展示的用户名字
 }
 
 export default (state = defaultState, action) => {
     switch(action.type){
-        case 'change_input':
-            let changeValue = JSON.parse(JSON.stringify(state))
-            changeValue.inputValue = action.value
-            return changeValue
-
-        case 'add_item':
-            let addItem = JSON.parse(JSON.stringify(state))
-            addItem.list.push(addItem.inputValue)
-            addItem.inputValue=''
-            return addItem
-
-        case 'delete_item':
-            let deleteItem = JSON.parse(JSON.stringify(state))
-            deleteItem.list.splice(action.index,1)
-            deleteItem.inputValue=''
-            return deleteItem
         
         // 获取用户名
         case 'userNameChange':

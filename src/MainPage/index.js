@@ -11,7 +11,7 @@ const MainPage = (props) => {
     return(
         <div className="mainPage">
             <p className="projectName">泡泡的办公系统</p>
-            <Header time={props}/>
+            <Header />
             <div className="NavAndContent">
                 <Aside/>
                 <MainPageContent />
